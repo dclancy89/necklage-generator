@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Necklace Pattern Generator</title>
+        <style>
+            #beadCount {
+                padding-bottom: 10px;
+            }
+
+            #controls {
+                margin-top: 20px;
+                padding: 3px;
+                border: 1px solid black;
+                display: inline-block;
+            }
+
+            #controls > div {
+                margin-bottom: 3px;
+            }
+
+            #savedNecklaces {
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+            }
+
+            #necklace {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 60%;
+            }
+
+            .bead {
+                border-radius: 100%;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+            .clasp {
+                border-radius: 100%;
+                background-color: orange;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="beadCount"></div>
+        <div>Orange beads represent clasp</div>
+        <div id="controls">
+            <div>
+                <input type="number" name="necklaceSizeInches" id="necklaceSizeInches" /> <label for="necklaceSizeInches">Necklace Size in Inches</label>
+            </div>
+            <div>
+                <input type="number" name="beadSizeMillimeters" id="beadSizeMillimeters" /> <label for="beadSizeMillimeters">Bead Size in MM</label>
+            </div>
+            <div>
+                <input type="number" name="claspLengthInches" id="claspLengthInches" /> <label for="claspLengthInches">Clasp Lenth in Inches</label>
+            </div>
+            <div>
+                <input type="number" name="minNumHem" id="minNumHem" /> <label for="minNumHem">Min number of Lava Beads</label>
+            </div>
+            <div>
+                <input type="number" name="maxNumHem" id="maxNumHem" /> <label for="maxNumHem">Max number of Lava Beads</label>
+            </div>
+            <div>
+                <input type="number" name="minNumTur" id="minNumTur" /> <label for="minNumTur">Min number of Amethyst Beads</label>
+            </div>
+            <div>
+                <input type="number" name="maxNumTur" id="maxNumTur" /> <label for="maxNumTur">Max number of Amethyst Beads</label>
+            </div>
+            <button id="generate" type="submit">Generate Necklace</button>
+            <br /><br />
+            <button id="save" type="submit" disabled>Save necklace</button>
+        </div>
+        <h3>Saved Necklaces</h3>
+        <div id="savedNecklaces"></div>
+        <div id="necklace"></div>
+        <script src="necklace-generator.js"></script>
+    </body>
+</html>
